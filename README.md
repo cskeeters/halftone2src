@@ -19,3 +19,9 @@ Then use halftone2src to convert the RGB halftone PNG into source code (hex).
 
     g++ lodepng.cpp halftone2src.cpp -ansi -pedantic -Wall -Wextra -O3 -o halftone2src
     ./halftone2src chad_h4x4a.png
+
+Then take those codes and surround it with:
+
+    unsigned const char chad_data[128*128/8] PROGMEM = {
+        ...
+    }
